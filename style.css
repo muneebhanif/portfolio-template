@@ -133,7 +133,7 @@ body.open .navbar-menu {
 
 
 .sect-1{
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.50)), url(imgs/glass-sculpture-of-dionysus.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.30)), url(imgs/glass-sculpture-of-dionysus.png);
 height: 120vh;
  background-repeat: no-repeat;
  background-size: cover;
@@ -210,7 +210,7 @@ a {
 #sect-2{
   display: grid;
   margin: 32px 0 0 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.50)), url(imgs/glass-sculpture-of-aphrodite-2.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.30)), url(imgs/glass-sculpture-of-aphrodite-2.png);
   height: 140vh;
  background-repeat: no-repeat;
  background-size: cover;
@@ -389,7 +389,7 @@ a {
   place-items: center;
   align-content: center;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.50)), url(imgs/glass-sculpture-of-aphrodite.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.30)), url(imgs/glass-sculpture-of-aphrodite.png);
   height: 120vh;
  background-repeat: no-repeat;
  background-size: cover;
@@ -444,7 +444,7 @@ a {
   padding: 40px 0;
   color: white;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.50)), url(imgs/glass-sculpture-of-hades.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.30)), url(imgs/glass-sculpture-of-hades.png);
   height: 120vh;
   background-repeat: no-repeat;
   background-size: cover;
