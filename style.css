@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+
+nav{
+  background: #000000;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #dcdcdcab;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+
+.sect-1{
+  background: url(imgs/glass-sculpture-of-dionysus.png);
+  height: 120vh;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+.sect-1:hover {
+  background-position: 5px 0; 
+  animation: move-bg 0.7s ease-in-out infinite alternate; 
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5px 0;
+  }
+}
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.middle1 {
+    position: relative;
+    height: 82vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0 0 14rem;
+  }
+  
+  .title {
+    font-size: 100px;
+    letter-spacing: -3px;
+    font-weight: 700;
+    z-index: 1; 
+    color: white;
+  }
+  
+  .head-image img {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    top: calc(18% + 10px); 
+    z-index: 2; 
+  }
+
+.title p {
+    margin: 2px 4px -16px 0;
+    font-size: x-large;
+}
+.heading2 {
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+
+}
+
+.sect-2{
+  display: grid;
+  margin: 32px 0 0 0;
+  background: url(imgs/glass-sculpture-of-aphrodite-2.png);
+  height: 140vh;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.sect-2:hover {
+  background-position: 5px 0; 
+  animation: move-bg 0.6s ease-in-out infinite alternate; 
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5px 0;
+  }
+}
+
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 65vh;
+  
+  margin: 0 0px 0px 6rem;
+  background-color: #dcdcdc;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+.card2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 65vh;
+  margin: 0 6rem 0px auto; 
+  background-color: #dcdcdc;
+}
+
+.card2-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.card2-content {
+  flex: 1;
+}
+
+.card2-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.card3-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.card3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 65vh;
+  
+  margin: 0 0px 0px 6rem;
+  background-color: #dcdcdc;
+}
+
+.card3-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.card3-content {
+  flex: 1;
+}
+
+.card3-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card3-text {
+  font-size: 14px;
+  color: #666;
+}
+.card4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 65vh;
+  margin: 0 6rem 3rem auto; 
+  background-color: #dcdcdc;
+}
+
+.card4-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.card4-content {
+  flex: 1;
+}
+
+.card4-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.title3{
+  color: white;
+  text-align: center;
+ 
+  font-size: 30px;
+
+}
+
+.title2{
+  color: rgb(0, 0, 0);
+  margin: 0px 0 0 21px;
+}
+
+.sect3 {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  background: url(imgs/glass-sculpture-of-aphrodite.png);
+  height: 120vh;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.sect3:hover {
+  background-position: 5px 0; 
+  animation: move-bg 0.7s ease-in-out infinite alternate; 
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5px 0;
+  }
+}
+
+
+.card-container {
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 20px; 
+  background-color: #dcdcdc; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.flexbox {
+  display: flex;
+  margin: 0rem 0 0 0;
+  border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+  border-color: #dcdcdc;
+}
+
+.imgplc {
+  display: flex;
+  justify-content: flex-start; /* align the image to the left */
+}
+
+.imgplc img {
+  height: 60vh;
+  width: 189%;
+  object-fit: cover;
+  margin: 0 0 0 -7rem;
+}
+
+
+
+.best-projects {
+  font-size: 30px;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  background: url(imgs/glass-sculpture-of-hades.png);
+  height: 120vh;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.best-projects:hover {
+  background-position: 5px 0; 
+  animation: move-bg 0.7s ease-in-out infinite alternate; 
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 5px 0;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  margin: 20px;
+  width: calc(23.33% - 19px);
+  background-color: #dcdcdc;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  margin-top: 5rem;
+}
+
+.project img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-top: 10px;
+ color: #222;
+}
+
+.project p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color:black
+}
+
+.btn {
+  background-color: #3b3f54;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3b3f54;
+}
+
+
+
+/* Basic Footer Styling */
+footer {
+  background-color: #111;
+  padding: 45px 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #1abc9c;
+}
+
+footer p {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #aaa;
+}
+
+@media (max-width: 888px) {
+  ul {
+      
+      width: 95%;
+  }
+  .card-wrapper {
+    margin-bottom: 20px; /* adjust the value to control the gap between cards */
+  }
+  .card, .card2, .card3, .card4 {
+    margin: 0;
+  }
+ .sect-2{
+  display: grid;
+  justify-content: space-around;
+  background-position: center;
+  height: 187vh;
+ }
+ .projects-container{
+  display: grid;
+ /* adjust the number of columns as needed */
+  gap: 20px; /* add a gap between grid items */
+  justify-items: center; /* align grid items center horizontally */
+  align-items: center; /* align grid items center vertically */
+  margin: 0 auto;
+ }
+ .project {
+  margin: 0;
+  width: calc(38.33% - 4px);
+  background-color: #dcdcdc;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  margin-top: 1rem;
+}
+.best-projects{
+  height: 245vh;
+  background: url(imgs/glass-sculpture-of-hades.png) center / cover no-repeat;
+}
+
+.sect-1:hover {
+  background-position: center; 
+  animation: none; 
+}
+
+.sect-2:hover {
+  background-position: center; 
+  animation: none; 
+}
+
+.sect3:hover {
+  background-position: center; 
+  animation: none; 
+}
+
+
+
+
+
+
+
+
+
+ .card{
+  margin: 0 auto;
+}
+.card2{
+  margin: 0 auto;
+}
+.card3{
+  margin: 0 auto;
+}
+.card4{
+  margin: 0 auto;
+}
+.best-projects:hover {
+  background-position: center; 
+  animation: none; 
+}
+
+
+}
+
+
+@media (max-width: 766px){
+  .middle1{
+    margin: 8px 0 0 2rem;
+  }
+  .sect-1 {
+    height: 100vh;
+    background-position: center;
+  }
+
+  ul{
+    
+      width: 92%;
+
+  }
+  .card{
+    margin: 0 auto;
+  }
+
+  .card-container{
+    transform: scale(0.7);
+  }
+
+  .imgplc img{
+    margin: 0 0 0 -3rem;
+
+  }
+  .best-projects{
+    height: 265vh;
+  }
+}
+
+@media (max-width: 572px){
+
+.title{
+  font-size: 80px;
+
+}  
+.sect-2{
+  height: 130vh;
+}
+
+
+}
+@media (max-width: 405px){
+  
+  .title{
+  font-size: 65px;
+  font-weight: 900;
+  }
+  
+  .card-wrapper {
+    margin-bottom: 0px;
+    transform: scale(0.8);
+    margin: 0 auto;
+}
+
+ 
+  
+}
+ 
+
+
+
+
+
+
+
