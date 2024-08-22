@@ -6,92 +6,126 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: black;
+    scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: #19191c;
+  color: #f9f9f9;
+  font-family: "Poppins";
+  box-sizing: border-box;
 }
 
-nav{
-  background: #000000;
-  height: 80px;
+@media only screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+  }
+}
+
+.navbar-overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
-label.logo{
-  color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
+
+body.open .navbar-overlay {
+  visibility: visible;
+  opacity: 1;
 }
-nav ul{
-  float: right;
-  margin-right: 20px;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,a:hover{
-  background: #dcdcdcab;
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
+
+@media only screen and (min-width: 600px) {
+  .navbar-overlay {
+    display: none;
   }
 }
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul{
-    left: 0;
+
+.navbar-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-burger {
+    display: none;
   }
 }
-section{
+
+.navbar-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.navbar-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  translate: -100% 0;
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000000;
+  visibility: hidden;
+  transition: translate 0.3s;
+}
+
+body.open .navbar-menu {
+  translate: 0 0;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+  }
+}
+
+.navbar-menu > a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  padding: 8px;
+}
+
+.navbar-menu > a:hover {
+  color: #f9f9f9;
+}
+
+.navbar-menu > a.active {
+  color: #f9f9f9;
+}
+
+.section{
   background: url(bg1.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
@@ -99,8 +133,8 @@ section{
 
 
 .sect-1{
-  background: url(imgs/glass-sculpture-of-dionysus.png);
-  height: 120vh;
+background: url(imgs/glass-sculpture-of-dionysus.png);
+height: 120vh;
  background-repeat: no-repeat;
  background-size: cover;
 
@@ -142,13 +176,14 @@ a {
     justify-content: flex-start;
     align-items: center;
     margin: 8px 0 0 14rem;
+    
   }
   
   .title {
     font-size: 100px;
     letter-spacing: -3px;
     font-weight: 700;
-    z-index: 1; 
+    z-index: 0; 
     color: white;
   }
   
@@ -157,7 +192,7 @@ a {
     left: 30%;
     transform: translateX(-50%);
     top: calc(18% + 10px); 
-    z-index: 2; 
+    z-index: -1; 
   }
 
 .title p {
@@ -172,7 +207,7 @@ a {
 
 }
 
-.sect-2{
+#sect-2{
   display: grid;
   margin: 32px 0 0 0;
   background: url(imgs/glass-sculpture-of-aphrodite-2.png);
@@ -180,7 +215,7 @@ a {
  background-repeat: no-repeat;
  background-size: cover;
 }
-.sect-2:hover {
+#sect-2:hover {
   background-position: 5px 0; 
   animation: move-bg 0.6s ease-in-out infinite alternate; 
 }
@@ -349,7 +384,7 @@ a {
   margin: 0px 0 0 21px;
 }
 
-.sect3 {
+#sect3 {
   display: grid;
   place-items: center;
   align-content: center;
@@ -359,7 +394,7 @@ a {
  background-repeat: no-repeat;
  background-size: cover;
 }
-.sect3:hover {
+#sect3:hover {
   background-position: 5px 0; 
   animation: move-bg 0.7s ease-in-out infinite alternate; 
 }
@@ -404,17 +439,18 @@ a {
 
 
 
-.best-projects {
+#best-projects {
   font-size: 30px;
   padding: 40px 0;
   color: white;
   text-align: center;
   background: url(imgs/glass-sculpture-of-hades.png);
   height: 120vh;
- background-repeat: no-repeat;
- background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.best-projects:hover {
+
+#best-projects:hover {
   background-position: 5px 0; 
   animation: move-bg 0.7s ease-in-out infinite alternate; 
 }
@@ -548,7 +584,7 @@ footer p {
   .card, .card2, .card3, .card4 {
     margin: 0;
   }
- .sect-2{
+ #sect-2{
   display: grid;
   justify-content: space-around;
   background-position: center;
@@ -572,7 +608,7 @@ footer p {
   padding: 14px;
   margin-top: 1rem;
 }
-.best-projects{
+#best-projects{
   height: 245vh;
   background: url(imgs/glass-sculpture-of-hades.png) center / cover no-repeat;
 }
@@ -582,22 +618,15 @@ footer p {
   animation: none; 
 }
 
-.sect-2:hover {
+#sect-2:hover {
   background-position: center; 
   animation: none; 
 }
 
-.sect3:hover {
+#sect3:hover {
   background-position: center; 
   animation: none; 
 }
-
-
-
-
-
-
-
 
 
  .card{
@@ -612,7 +641,7 @@ footer p {
 .card4{
   margin: 0 auto;
 }
-.best-projects:hover {
+#best-projects:hover {
   background-position: center; 
   animation: none; 
 }
@@ -647,23 +676,39 @@ footer p {
     margin: 0 0 0 -3rem;
 
   }
-  .best-projects{
+  #best-projects{
     height: 265vh;
   }
 }
 
 @media (max-width: 572px){
 
+  #sect3:hover {
+    background-position: center; 
+    animation: none; 
+  }
+  
 .title{
-  font-size: 80px;
+  font-size: 75px;
 
 }  
-.sect-2{
-  height: 130vh;
+#sect-2{
+  height: 140vh;
+}
+#best-projects {
+  height: 232vh;
+}
+.imgplc img {
+        margin: 0 0 0 -5rem;
+}
+.imgplc img {
+  height: 60vh;
+  width: 263%;
+}
 }
 
 
-}
+
 @media (max-width: 405px){
   
   .title{
@@ -676,15 +721,42 @@ footer p {
     transform: scale(0.8);
     margin: 0 auto;
 }
-
+.project {
+  margin: 0;
+  width: calc(65.33% - 0px);
  
   
 }
+}
  
+@media(max-width:470px){
 
+  .card-wrapper{
+    margin: 0;
+    transform: scale(0.6);
+    height: 190px;
+  }
+}
 
+@media (max-width: 470px) {
+  .card-father {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-wrapper {
+    
+    transform: scale(0.6);
+    height: 190px;
+}
+.card, .card2, .card3, .card4 {
+  width: 95%; /* make cards full-width */
+  margin: 0; /* remove margin */
+}
 
-
+}
+  
+  
 
 
 
