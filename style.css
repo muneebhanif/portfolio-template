@@ -396,6 +396,7 @@ a {
   height: 120vh;
  background-repeat: no-repeat;
  background-size: cover;
+ background-position: center;
 }
 #sect3:hover {
   background-position: 5px 0; 
@@ -603,7 +604,7 @@ footer p {
  }
  .project {
   margin: 0;
-  width: calc(38.33% - 4px);
+  width: calc(66.33% - 4px);
   background-color: #dcdcdc;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -654,11 +655,16 @@ footer p {
 
 
 @media (max-width: 766px){
+  .navbar-title {
+    margin: 1rem 0 0 66px;
+    font-size: 22px;
+}
   .middle1{
     margin: 8px 0 0 2rem;
   }
   .sect-1 {
-    height: 100vh;
+    
+      height: 81vh;
     background-position: center;
   }
 
@@ -695,11 +701,15 @@ footer p {
   font-size: 75px;
 
 }  
+#sect3{
+  height: 85vh;
+
+}
 #sect-2{
-  height: 140vh;
+  height: 108vh;
 }
 #best-projects {
-  height: 220vh;
+  height: 172vh;
 }
 .imgplc img {
         margin: 0 0 0 -5rem;
@@ -736,8 +746,8 @@ footer p {
 
   .card-wrapper{
     margin: 0;
-    transform: scale(0.6);
-    height: 190px;
+    transform: scale(0.85);
+    height: 244px;
   }
 }
 
