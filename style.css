@@ -31,6 +31,8 @@ body {
   }
 }
 
+
+/*navbar */
 .navbar-overlay {
   position: fixed;
   z-index: 2;
@@ -133,6 +135,8 @@ body.open .navbar-menu {
 }
 
 
+/*section 2 */
+
 .sect-1{
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.30)), url(imgs/glass-sculpture-of-dionysus.png);
 height: 120vh;
@@ -210,6 +214,7 @@ a {
 
 }
 
+/*section - 2 */
 #sect-2{
   display: grid;
   margin: 32px 0 0 0;
@@ -388,7 +393,7 @@ a {
 }
 
 #sect3 {
-  display: grid;
+  display: grid;  /*display of section 3*/
   place-items: center;
   align-content: center;
   min-height: 100vh;
@@ -414,7 +419,7 @@ a {
 
 
 .card-container {
-  max-width: 800px; 
+  max-width: 800px; /*width for containerss */
   margin: 0 auto;
   padding: 20px; 
   background-color: #dcdcdc; 
@@ -441,7 +446,7 @@ a {
   margin: 0 0 0 -7rem;
 }
 
-
+/*projects section */
 
 #best-projects {
   font-size: 30px;
@@ -519,7 +524,8 @@ a {
 
 
 
-/* Basic Footer Styling */
+/* Basic footer styling */
+/*Adjust it if you are using my code  */
 footer {
   background-color: #111;
   padding: 45px 0;
