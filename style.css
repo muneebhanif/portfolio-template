@@ -431,7 +431,7 @@ a {
 
 .imgplc {
   display: flex;
-  justify-content: flex-start; /* align the image to the left */
+  justify-content: flex-start; 
 }
 
 .imgplc img {
@@ -583,7 +583,7 @@ footer p {
       width: 95%;
   }
   .card-wrapper {
-    margin-bottom: 20px; /* adjust the value to control the gap between cards */
+    margin-bottom: 20px; /* still finding something?*/
   }
   .card, .card2, .card3, .card4 {
     margin: 0;
